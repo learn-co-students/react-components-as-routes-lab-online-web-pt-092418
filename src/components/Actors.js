@@ -6,13 +6,12 @@ const Actor = ({name, movies}) => (
     <h3>{name}</h3>
     <p>Movies:</p>
     <ul>
-      {movies.map((movie) => (
-        <li>{movie}</li>
+      {movies.map((movie, index) => (
+        <li key={index}>{movie}</li>
       ))}
     </ul>
   </div>
 )
-
 
 const Actors = () => {
   return (
