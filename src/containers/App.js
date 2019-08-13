@@ -14,11 +14,11 @@ const App = (props) => {
   return (
     <Router>
       <div>
-        <Route path='/navbar' component={Navbar}/>
-        <Route path='/' component={Home}/>
-        <Route path='/movies' component={Movies}/>
-        <Route path='/directors' component={Directors} />
-        <Route path='/actors' component={Actors}/>
+        <NavBar />
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/movies' component={Movies}/>
+        <Route exact path='/directors' component={Directors} />
+        <Route exact path='/actors' component={Actors}/>
       </div>
     </Router>
   );
