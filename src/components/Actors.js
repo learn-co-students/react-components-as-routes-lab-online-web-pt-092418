@@ -2,9 +2,20 @@ import React from 'react';
 import { actors } from '../data';
 
 const Actors = () => {
-  return (
+  const actorsHtml = actors.map((actor, i) =>{
+    const movie = actor.movies.join(",");
+    return(
+      <div key={i} className="actor">
+        {actor.name}- {movie}
+      </div> );
+    });
+  
+    return (
     <div>
-      {/*{code here}*/}
+      <h1>Actors Page</h1>
+      
+        {actorsHtml}
+      
     </div>
   );
 };
